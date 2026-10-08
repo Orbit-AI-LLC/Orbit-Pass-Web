@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Sign in - Claude (fixture)</title>
+<style>body{font:16px system-ui;margin:40px}input{font:inherit;padding:8px;width:300px}button{display:block;margin-top:12px;padding:8px 16px;width:318px}</style></head>
+<body>
+  <!-- claude.ai/login's sign-in box as it ships (October 2026): email first, no
+       password box, autocomplete="email". It is a login, not personal details. -->
+  <h1>Your thinking partner for big ambitions</h1>
+  <button type="button">Continue with Google</button>
+  <button type="button">Continue with Apple</button>
+  <p>OR</p>
+  <form action="/login">
+    <div>
+      <input id="email" type="email" autocomplete="email" placeholder="Enter your email" aria-label="Email">
+      <button type="submit">Continue with email</button>
+    </div>
+  </form>
+  <button type="button">Continue with SSO</button>
+</body>
+</html>

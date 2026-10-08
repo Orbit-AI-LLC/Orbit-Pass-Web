@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Acme checkout</title>
+<style>body{font:16px system-ui;margin:40px}label{display:block;margin-top:12px}input,select{font:inherit;padding:6px;width:260px}</style></head>
+<body>
+  <h1>Checkout</h1>
+  <h2>Shipping address</h2>
+  <form id="ship">
+    <label>First name <input name="billing_first_name"></label>
+    <label>Last name <input name="billing_last_name"></label>
+    <label>Street address <input name="billing_address_1" placeholder="House number and street name"></label>
+    <label>Town / City <input name="billing_city"></label>
+    <label>ZIP Code <input name="billing_postcode"></label>
+    <label>Email address <input name="billing_email" type="email"></label>
+  </form>
+  <h2>Payment</h2>
+  <form id="pay">
+    <label>Name on card <input name="ccname"></label>
+    <label>Card number <input name="cardnumber" placeholder="1234 1234 1234 1234" inputmode="numeric"></label>
+    <label>Expiration (MM / YY) <input name="exp" placeholder="MM / YY"></label>
+    <label>CVC <input name="cvc" maxlength="4"></label>
+  </form>
+</body>
+</html>

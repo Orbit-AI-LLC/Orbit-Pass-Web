@@ -1,0 +1,1 @@
+{ "encrypted": true, "passwordProtected": true, "salt": "c2FsdA==", "kdfType": 0, "kdfIterations": 600000, "data": "2.abc|def|ghi" }

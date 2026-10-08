@@ -1,0 +1,4 @@
+name,url,username,password,note,cardholdername,cardnumber,cvc,expirydate,zipcode,folder,full_name,phone_number,email,address1,address2,city,country,state,type
+Visa,,,,,Dana M,4111 1111 1111 1111,123,09/28,,,,,,,,,,,credit_card
+Me,,,,,,,,,,,Dana M,555,dana@acme.test,1 Main St,,Springfield,US,IL,identity
+Shop,https://shop.example,dana,shop-pass,,,,,,,Shopping,,,,,,,,,password

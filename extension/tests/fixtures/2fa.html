@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Acme two-step verification</title>
+<style>body{font:16px system-ui;margin:40px}label{display:block;margin-top:14px}input{font:inherit;padding:8px;width:180px}</style></head>
+<body>
+  <!-- No autocomplete attribute, no "otp" in the name: only the model can place this field. -->
+  <h1>Two-step verification</h1>
+  <p>Open your authenticator app and enter the 6-digit code.</p>
+  <form>
+    <label for="c">Code</label>
+    <input id="c" name="code" type="text" inputmode="numeric" maxlength="6">
+    <label for="promo">Promo code</label>
+    <input id="promo" name="promo" type="text">
+  </form>
+</body>
+</html>

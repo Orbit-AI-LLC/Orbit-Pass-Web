@@ -1,0 +1,10 @@
+{
+  "name": "orbit-pass-extension",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Orbit Pass for Chrome. No build step: the extension loads these files as they are. Node is only for the tests.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"tests/*.test.js\""
+  }
+}

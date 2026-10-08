@@ -1,0 +1,5 @@
+name,url,username,password,note
+accounts.google.com,https://accounts.google.com/signin,dana@acme.test,"pa,ss""word",
+github.com,https://github.com/login,dana,gh-secret-1,"Work account
+second line"
+Just a name,,,,

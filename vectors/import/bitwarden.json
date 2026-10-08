@@ -1,0 +1,21 @@
+{
+  "encrypted": false,
+  "folders": [{ "id": "f1", "name": "Finance" }],
+  "items": [
+    {
+      "id": "i1", "folderId": "f1", "type": 1, "name": "Bank", "notes": "Call 555-0100", "favorite": true,
+      "fields": [{ "name": "PIN", "value": "4321", "type": 1 }, { "name": "Branch", "value": "Main", "type": 0 }],
+      "login": { "uris": [{ "match": null, "uri": "https://bank.example/login" }, { "uri": "https://m.bank.example" }], "username": "dana", "password": "b4nk!", "totp": "otpauth://totp/Bank:dana?secret=JBSWY3DPEHPK3PXP&issuer=Bank&digits=8" }
+    },
+    { "id": "i2", "folderId": null, "type": 2, "name": "Recovery codes", "notes": "abcd-efgh\nijkl-mnop", "favorite": false, "secureNote": { "type": 0 } },
+    {
+      "id": "i3", "folderId": "f1", "type": 3, "name": "Travel card", "notes": null, "favorite": false,
+      "card": { "cardholderName": "Dana M", "brand": "Visa", "number": "4111111111111111", "expMonth": "3", "expYear": "29", "code": "987" }
+    },
+    {
+      "id": "i4", "folderId": null, "type": 4, "name": "Dana", "notes": "", "favorite": false,
+      "identity": { "title": "Ms", "firstName": "Dana", "middleName": null, "lastName": "M", "address1": "1 Main St", "address2": "Apt 2", "address3": "Rear", "city": "Springfield", "state": "IL", "postalCode": "62701", "country": "US", "company": "Acme", "email": "dana@acme.test", "phone": "555-0100" }
+    },
+    { "id": "i5", "type": 5, "name": "Server key", "sshKey": { "privateKey": "..." } }
+  ]
+}

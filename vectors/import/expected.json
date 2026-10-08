@@ -1,0 +1,421 @@
+{
+  "bitwarden-encrypted.json": {
+    "error": "ImportError"
+  },
+  "bitwarden.csv": {
+    "source": "Bitwarden",
+    "skipped": 0,
+    "items": [
+      {
+        "type": "login",
+        "title": "Jira",
+        "favorite": true,
+        "notes": "",
+        "tags": [
+          "Work"
+        ],
+        "fields": [],
+        "login": {
+          "username": "dana@acme.test",
+          "password": "jira-pass",
+          "urls": [
+            "https://acme.atlassian.net",
+            "https://id.atlassian.com"
+          ],
+          "totp": "JBSWY3DPEHPK3PXP"
+        }
+      },
+      {
+        "type": "note",
+        "title": "Door codes",
+        "favorite": false,
+        "notes": "Front 1234",
+        "tags": [],
+        "fields": []
+      },
+      {
+        "type": "login",
+        "title": "Steam",
+        "favorite": false,
+        "notes": "",
+        "tags": [
+          "Personal"
+        ],
+        "fields": [
+          {
+            "name": "One-time password",
+            "value": "steam://ABCDE",
+            "hidden": true
+          }
+        ],
+        "login": {
+          "username": "dana_m",
+          "password": "steam-pass",
+          "urls": [
+            "https://store.steampowered.com"
+          ],
+          "totp": ""
+        }
+      }
+    ]
+  },
+  "bitwarden.json": {
+    "source": "Bitwarden",
+    "skipped": 1,
+    "items": [
+      {
+        "type": "login",
+        "title": "Bank",
+        "favorite": true,
+        "notes": "Call 555-0100",
+        "tags": [
+          "Finance"
+        ],
+        "fields": [
+          {
+            "name": "PIN",
+            "value": "4321",
+            "hidden": true
+          },
+          {
+            "name": "Branch",
+            "value": "Main",
+            "hidden": false
+          }
+        ],
+        "login": {
+          "username": "dana",
+          "password": "b4nk!",
+          "urls": [
+            "https://bank.example/login",
+            "https://m.bank.example"
+          ],
+          "totp": "otpauth://totp/Bank:dana?secret=JBSWY3DPEHPK3PXP&issuer=Bank&digits=8"
+        }
+      },
+      {
+        "type": "note",
+        "title": "Recovery codes",
+        "favorite": false,
+        "notes": "abcd-efgh\nijkl-mnop",
+        "tags": [],
+        "fields": []
+      },
+      {
+        "type": "card",
+        "title": "Travel card",
+        "favorite": false,
+        "notes": "",
+        "tags": [
+          "Finance"
+        ],
+        "fields": [],
+        "card": {
+          "cardholder": "Dana M",
+          "number": "4111111111111111",
+          "expMonth": "03",
+          "expYear": "2029",
+          "cvv": "987",
+          "brand": "Visa"
+        }
+      },
+      {
+        "type": "identity",
+        "title": "Dana",
+        "favorite": false,
+        "notes": "",
+        "tags": [],
+        "fields": [],
+        "identity": {
+          "firstName": "Dana",
+          "middleName": "",
+          "lastName": "M",
+          "email": "dana@acme.test",
+          "phone": "555-0100",
+          "company": "Acme",
+          "address1": "1 Main St",
+          "address2": "Apt 2, Rear",
+          "city": "Springfield",
+          "state": "IL",
+          "postalCode": "62701",
+          "country": "US"
+        }
+      }
+    ]
+  },
+  "chrome.csv": {
+    "source": "Chrome, Edge or Brave",
+    "skipped": 1,
+    "items": [
+      {
+        "type": "login",
+        "title": "accounts.google.com",
+        "favorite": false,
+        "notes": "",
+        "tags": [],
+        "fields": [],
+        "login": {
+          "username": "dana@acme.test",
+          "password": "pa,ss\"word",
+          "urls": [
+            "https://accounts.google.com/signin"
+          ],
+          "totp": ""
+        }
+      },
+      {
+        "type": "login",
+        "title": "github.com",
+        "favorite": false,
+        "notes": "Work account\nsecond line",
+        "tags": [],
+        "fields": [],
+        "login": {
+          "username": "dana",
+          "password": "gh-secret-1",
+          "urls": [
+            "https://github.com/login"
+          ],
+          "totp": ""
+        }
+      }
+    ]
+  },
+  "dashlane.csv": {
+    "source": "Dashlane",
+    "skipped": 0,
+    "items": [
+      {
+        "type": "login",
+        "title": "Reddit",
+        "favorite": false,
+        "notes": "",
+        "tags": [
+          "Social"
+        ],
+        "fields": [],
+        "login": {
+          "username": "dana.alt",
+          "password": "rd-pass",
+          "urls": [
+            "reddit.com"
+          ],
+          "totp": "JBSWY3DPEHPK3PXP"
+        }
+      }
+    ]
+  },
+  "firefox.csv": {
+    "source": "Firefox",
+    "skipped": 0,
+    "items": [
+      {
+        "type": "login",
+        "title": "",
+        "favorite": false,
+        "notes": "",
+        "tags": [],
+        "fields": [],
+        "login": {
+          "username": "dana",
+          "password": "fx-pass-1",
+          "urls": [
+            "https://www.mozilla.org"
+          ],
+          "totp": ""
+        }
+      },
+      {
+        "type": "login",
+        "title": "",
+        "favorite": false,
+        "notes": "",
+        "tags": [],
+        "fields": [],
+        "login": {
+          "username": "dana.m",
+          "password": "b@nk;pass",
+          "urls": [
+            "https://bank.example"
+          ],
+          "totp": ""
+        }
+      }
+    ]
+  },
+  "generic-semicolon.csv": {
+    "source": "a CSV file",
+    "skipped": 0,
+    "items": [
+      {
+        "type": "login",
+        "title": "",
+        "favorite": false,
+        "notes": "VPN first",
+        "tags": [],
+        "fields": [],
+        "login": {
+          "username": "dana",
+          "password": "semi;colon",
+          "urls": [
+            "https://intranet.acme.test"
+          ],
+          "totp": ""
+        }
+      }
+    ]
+  },
+  "keepass.csv": {
+    "source": "KeePass",
+    "skipped": 0,
+    "items": [
+      {
+        "type": "login",
+        "title": "Mail",
+        "favorite": false,
+        "notes": "",
+        "tags": [
+          "Email"
+        ],
+        "fields": [],
+        "login": {
+          "username": "dana",
+          "password": "mail-pass",
+          "urls": [
+            "https://mail.example"
+          ],
+          "totp": ""
+        }
+      }
+    ]
+  },
+  "lastpass.csv": {
+    "source": "LastPass",
+    "skipped": 0,
+    "items": [
+      {
+        "type": "login",
+        "title": "Twitter",
+        "favorite": true,
+        "notes": "",
+        "tags": [
+          "Social"
+        ],
+        "fields": [],
+        "login": {
+          "username": "dana",
+          "password": "tw-pass",
+          "urls": [
+            "https://twitter.com"
+          ],
+          "totp": ""
+        }
+      },
+      {
+        "type": "note",
+        "title": "DB notes",
+        "favorite": false,
+        "notes": "NoteType:Server\nHostname:db1",
+        "tags": [
+          "Servers"
+        ],
+        "fields": []
+      }
+    ]
+  },
+  "nordpass.csv": {
+    "source": "NordPass",
+    "skipped": 1,
+    "items": [
+      {
+        "type": "card",
+        "title": "Visa",
+        "favorite": false,
+        "notes": "",
+        "tags": [],
+        "fields": [],
+        "card": {
+          "cardholder": "Dana M",
+          "number": "4111111111111111",
+          "expMonth": "09",
+          "expYear": "2028",
+          "cvv": "123",
+          "brand": ""
+        }
+      },
+      {
+        "type": "login",
+        "title": "Shop",
+        "favorite": false,
+        "notes": "",
+        "tags": [
+          "Shopping"
+        ],
+        "fields": [],
+        "login": {
+          "username": "dana",
+          "password": "shop-pass",
+          "urls": [
+            "https://shop.example"
+          ],
+          "totp": ""
+        }
+      }
+    ]
+  },
+  "onepassword.csv": {
+    "source": "1Password",
+    "skipped": 0,
+    "items": [
+      {
+        "type": "login",
+        "title": "Netflix",
+        "favorite": true,
+        "notes": "Shared with family",
+        "tags": [
+          "Home",
+          "Media"
+        ],
+        "fields": [],
+        "login": {
+          "username": "dana@acme.test",
+          "password": "nf-pass",
+          "urls": [
+            "https://netflix.com"
+          ],
+          "totp": ""
+        }
+      }
+    ]
+  },
+  "safari.csv": {
+    "source": "Safari or Apple Passwords",
+    "skipped": 0,
+    "items": [
+      {
+        "type": "login",
+        "title": "Example (dana@acme.test)",
+        "favorite": false,
+        "notes": "",
+        "tags": [],
+        "fields": [],
+        "login": {
+          "username": "dana@acme.test",
+          "password": "ex-pass-1",
+          "urls": [
+            "https://example.com/"
+          ],
+          "totp": "otpauth://totp/Example:dana%40acme.test?secret=JBSWY3DPEHPK3PXP&issuer=Example"
+        }
+      },
+      {
+        "type": "note",
+        "title": "Wi-Fi",
+        "favorite": false,
+        "notes": "The router is in the hall",
+        "tags": [],
+        "fields": []
+      }
+    ]
+  }
+}

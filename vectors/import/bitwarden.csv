@@ -1,0 +1,4 @@
+folder,favorite,type,name,notes,fields,reprompt,login_uri,login_username,login_password,login_totp
+Work,1,login,Jira,,,0,"https://acme.atlassian.net,https://id.atlassian.com",dana@acme.test,jira-pass,jbsw y3dp ehpk 3pxp
+,,note,Door codes,Front 1234,,0,,,,
+Personal,,login,Steam,,,0,https://store.steampowered.com,dana_m,steam-pass,steam://ABCDE

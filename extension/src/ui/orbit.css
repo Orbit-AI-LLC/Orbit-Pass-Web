@@ -1,0 +1,123 @@
+/* Orbit Pass extension pages. The Orbit design language: monochrome, following
+   the system theme, semantic colour only. Tokens match static/css/pass.css on
+   the server and Orbit Chat. Fonts are the system's: extension pages load
+   nothing from the network. */
+
+:root {
+  color-scheme: light;
+  --bg: #ffffff; --bg-subtle: #f7f7f7; --bg-raised: #ffffff; --bg-inset: #efefef; --bg-hover: #f2f2f2; --bg-active: #e6e6e6;
+  --border: #e4e4e4; --border-strong: #cfcfcf;
+  --text: #111111; --text-muted: #4d4d4d; --text-faint: #6b6b6b;
+  --accent: #111111; --accent-hover: #2a2a2a; --accent-soft: #efefef; --accent-text: #ffffff; --accent-ring: rgba(0, 0, 0, 0.22);
+  --danger: #b42318; --danger-soft: #fef3f2; --success: #067647; --success-soft: #ecfdf3; --warning: #b54708; --warning-soft: #fffaeb;
+  --radius-xs: 6px; --radius-sm: 8px; --radius: 12px; --radius-lg: 16px; --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 8px 24px -12px rgba(0, 0, 0, 0.22);
+  --ring: 0 0 0 3px var(--accent-ring);
+  --font: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #000000; --bg-subtle: #0a0a0a; --bg-raised: #141414; --bg-inset: #1c1c1c; --bg-hover: #1a1a1a; --bg-active: #262626;
+    --border: #262626; --border-strong: #3a3a3a;
+    --text: #f5f5f5; --text-muted: #a8a8a8; --text-faint: #8a8a8a;
+    --accent: #ffffff; --accent-hover: #e5e5e5; --accent-soft: #1f1f1f; --accent-text: #0a0a0a; --accent-ring: rgba(255, 255, 255, 0.32);
+    --danger: #f87171; --danger-soft: #2a1515; --success: #4ade80; --success-soft: #0f2a1c; --warning: #fbbf24; --warning-soft: #2b2110;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -8px rgba(0, 0, 0, 0.6);
+  }
+  .mark { filter: invert(1); }
+}
+
+/* Orbit AI. What Orbit's on-device AI does carries its sparkle in Orbit AI's
+   violet, small and beside the thing (aiMark in dom.js), as in Orbit Mail and
+   Orbit Chat. */
+:root { --ai: #6d3fd8; }
+@media (prefers-color-scheme: dark) { :root { --ai: #b49cfb; } }
+.ai-mark { color: var(--ai); vertical-align: -2px; margin-right: 5px; }
+.ai-mark svg { width: 14px; height: 14px; fill: currentColor; stroke: none; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body { color: var(--text); background: var(--bg); font: 14px/1.45 var(--font); -webkit-font-smoothing: antialiased; }
+body.center { min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; }
+button, input, select, textarea { font: inherit; color: inherit; }
+a { color: var(--text); }
+h1 { font-size: 1.25rem; margin: 0 0 6px; letter-spacing: -0.02em; font-weight: 650; }
+h2 { font-size: 0.95rem; margin: 0 0 4px; font-weight: 650; }
+p { margin: 0 0 12px; }
+.muted { color: var(--text-muted); font-size: 0.86rem; }
+.faint { color: var(--text-faint); font-size: 0.78rem; }
+.mono { font-family: var(--mono); }
+.card { background: var(--bg-raised); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow); }
+.card.narrow { width: 100%; max-width: 420px; text-align: center; }
+.mark { display: block; margin: 0 auto 12px; }
+.hidden { display: none !important; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 34px; padding: 6px 12px;
+  border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--bg-raised); color: var(--text);
+  font-size: 0.84rem; font-weight: 560; cursor: pointer; white-space: nowrap; box-shadow: var(--shadow-sm);
+  transition: background 120ms, border-color 120ms;
+}
+.btn:hover { background: var(--bg-hover); }
+.btn:focus-visible, .input:focus, .icon-btn:focus-visible { outline: none; box-shadow: var(--ring); border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+.btn.primary:hover { background: var(--accent-hover); }
+.btn.danger { color: var(--danger); }
+.btn.danger:hover { background: var(--danger-soft); border-color: var(--danger); }
+.btn.ghost { background: transparent; border-color: transparent; box-shadow: none; color: var(--text-muted); }
+.btn.ghost:hover { background: var(--bg-hover); color: var(--text); }
+.btn.block { width: 100%; }
+.btn:disabled { opacity: 0.55; cursor: default; }
+.icon-btn { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--text-muted); cursor: pointer; }
+.icon-btn:hover { background: var(--bg-hover); color: var(--text); }
+.icon-btn svg, .btn svg { width: 16px; height: 16px; }
+
+.input, select.input, textarea.input {
+  width: 100%; min-height: 36px; padding: 7px 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm);
+  background: var(--bg-raised); color: var(--text); font-size: 0.88rem;
+}
+textarea.input { min-height: 80px; resize: vertical; }
+.label { display: block; font-size: 0.74rem; font-weight: 600; color: var(--text-muted); margin: 12px 0 5px; text-transform: uppercase; letter-spacing: 0.05em; }
+.field-row { display: flex; gap: 6px; align-items: center; }
+.field-row .input { flex: 1; }
+.error { padding: 8px 10px; border-radius: var(--radius-sm); background: var(--danger-soft); color: var(--danger); font-size: 0.84rem; margin: 10px 0; text-align: left; }
+.notice { padding: 8px 10px; border-radius: var(--radius-sm); background: var(--bg-subtle); border: 1px solid var(--border); color: var(--text-muted); font-size: 0.84rem; margin: 10px 0; text-align: left; }
+.notice.warn { background: var(--warning-soft); border-color: transparent; color: var(--warning); }
+.divider { display: flex; align-items: center; gap: 10px; color: var(--text-faint); font-size: 0.75rem; margin: 14px 0; }
+.divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+.pill { display: inline-block; padding: 2px 8px; border-radius: var(--radius-pill); font-size: 0.7rem; font-weight: 650; background: var(--accent-soft); color: var(--text); }
+.pill.warn { background: var(--warning-soft); color: var(--warning); }
+
+.list { list-style: none; margin: 0; padding: 0; }
+.item-row { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; border: 0; border-radius: var(--radius-sm); background: transparent; text-align: left; cursor: pointer; }
+.item-row:hover, .item-row.active { background: var(--bg-hover); }
+.item-row .text { flex: 1; min-width: 0; }
+.item-row .title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.item-row .sub { color: var(--text-muted); font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.avatar { flex: none; width: 30px; height: 30px; border-radius: var(--radius-sm); background: var(--accent); color: var(--accent-text); display: grid; place-items: center; font-weight: 650; font-size: 0.8rem; }
+.avatar.soft { background: var(--bg-inset); color: var(--text); }
+/* A website's icon in place of the letter (site-icons.js), on a light tile in
+   both themes: icons are drawn for light pages. */
+.avatar.site { background: #ffffff; border: 1px solid var(--border); color-scheme: light; }
+.avatar.site img { display: block; width: 62%; height: 62%; object-fit: contain; }
+.section-title { font-size: 0.7rem; font-weight: 650; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-faint); margin: 12px 10px 4px; }
+
+.detail-field { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.detail-field:last-child { border-bottom: 0; }
+.detail-field .value { display: flex; align-items: center; gap: 6px; min-height: 30px; overflow-wrap: anywhere; }
+.detail-field .value .grow { flex: 1; min-width: 0; }
+.code { font: 650 1.4rem/1 var(--mono); letter-spacing: 0.08em; }
+.ring { width: 22px; height: 22px; }
+.toast { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); padding: 7px 12px; border-radius: var(--radius-sm); background: var(--accent); color: var(--accent-text); font-size: 0.8rem; font-weight: 600; box-shadow: var(--shadow); z-index: 10; }
+.meter { height: 4px; border-radius: 4px; background: var(--bg-inset); overflow: hidden; margin-top: 6px; }
+.meter > span { display: block; height: 100%; background: var(--text); }
+.switch { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.switch:last-child { border-bottom: 0; }
+.switch input[type=checkbox] { width: 34px; height: 20px; appearance: none; border-radius: 999px; background: var(--border-strong); position: relative; cursor: pointer; flex: none; transition: background 120ms; }
+.switch input[type=checkbox]::after { content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; transition: transform 120ms; }
+.switch input[type=checkbox]:checked { background: var(--accent); }
+.switch input[type=checkbox]:checked::after { transform: translateX(14px); background: var(--accent-text); }

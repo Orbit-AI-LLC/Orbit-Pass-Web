@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Acme sign in</title>
+<style>body{font:16px system-ui;margin:40px}label{display:block;margin-top:14px}input{font:inherit;padding:8px;width:280px}button{margin-top:16px;padding:8px 16px}</style></head>
+<body>
+  <h1>Sign in to Acme</h1>
+  <form id="login" action="/2fa.html" method="get">
+    <label for="user">Email or username</label>
+    <input id="user" name="login_field" type="text">
+    <label for="pass">Password</label>
+    <input id="pass" name="password" type="password">
+    <button type="submit">Sign in</button>
+  </form>
+</body>
+</html>
